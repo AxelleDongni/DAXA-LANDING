@@ -9,7 +9,6 @@ const BORDER = "#E5E7EB";
 const GREEN = "#10B981";
 
 /* ── tiny helpers ── */
-const css = (obj) => Object.entries(obj).map(([k,v])=>`${k.replace(/([A-Z])/g,'-$1').toLowerCase()}:${v}`).join(';');
 
 function useScroll() {
   const [y, setY] = useState(0);
@@ -41,7 +40,7 @@ function Nav({ onStart }) {
       </div>
       <div style={{ display: "flex", gap: 32, alignItems: "center" }}>
         {["Services", "Comment ça marche", "Tarifs", "Contact"].map(l => (
-          <a key={l} href="#" style={{ color: "rgba(255,255,255,0.75)", fontSize: 14, fontWeight: 500, textDecoration: "none" }}>{l}</a>
+          <a key={l} href="#how" style={{ color: "rgba(255,255,255,0.75)", fontSize: 14, fontWeight: 500, textDecoration: "none" }}>{l}</a>
         ))}
         <button onClick={onStart} style={{
           background: ORANGE, color: WHITE, border: "none",
